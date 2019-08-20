@@ -1,36 +1,24 @@
-## TODO's
+## Project definition
 
-You recently created a new company in the `GAMING industry`. The company will have the following scheme:
+The idea for this project is to show the best location where setting up a bar/restaurant whose objective is to serve as a nexus between different companies. 
+After-work culture is gaining relevance and even becoming an essential part in every business. Sacred liquids (also known as beer) allow humans to socialize and often create synergies, businesses and even new ventures. 
 
-- 20 Designers
-- 5 UI/UX Engineers
-- 10 Frontend Developers
-- 15 Data Engineers
-- 5 Backend Developers
-- 20 Account Managers
-- 1 Maintenance guy that loves basketball
-- 10 Executives
-- 1 CEO/President
+**Criterion to optimize the location:**
+- Funded companies. They pay income to their employees (instead of equity) that can spend in our restaurant/bar.
+- Companies with at least 10 employees.
+- Technological companies might be more interesting since trending topics meetups might attract more consumers. 
+- Different offices from the same company might be interesting for special events.
 
-As a data engineer you have asked all the employees to show their preferences on where to place the new office.
-Your goal is to place the **new company offices** in the best place for the company to grow.
-You have to found a place that more or less covers all the following requirements.
-Note that **it's impossible to cover all requirements**, so you have to prioritize at your glance.
 
-- Designers like to go to design talks and share knowledge. There must be some nearby companies that also do design.
-- 30% of the company have at least 1 child.
-- Developers like to be near successful tech startups with that have raised at least 1 Million dollars.
-- Executives like Starbucks A LOT. Ensure there's a starbucks not to far.
-- Account managers need to travel a lot
-- All people in the company have between 25 and 40 years, give them some place to go to party.
-- Nobody in the company likes to have companies with more than 10 years in a radius of 2 KM.
-- The CEO is Vegan
+**Steps:**
+1. Using MongoDB, create a new database and import the json with the data.
+2. Write a first query filtering essential data.
+3. Clean and prepare the dataset to work with.
+4. Export a json with the data and create a geoquery using MongoDB.
+5. Print a map showing all the companies we filtered before.
+6. Choose the best point and create a report using a pipelines.
 
-## How to deliver the project
 
-- You must justify your decision with tableau slides. Provide us the public tableau link inside a README.md
-  file at dir `module-2/project-mongodb-geospartial-queries`.
-- Provide `lat` and `long` for the new offices.
 
 ## Links & Resources
 
