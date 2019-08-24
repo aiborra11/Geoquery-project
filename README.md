@@ -14,7 +14,7 @@ After-work culture is gaining relevance and even becoming an essential part in e
 1. Using MongoDB, create a new database and import the json with the data.
 2. Write a first query filtering essential data.
 3. Clean and prepare the dataset to work with.
-4. Export a json with the data and create a geoquery using MongoDB.
+4. Export a json including the geopoint and set a geoquery using MongoDB.
 5. Print a map showing all the companies we filtered before.
 6. Choose the best point and create a report using a pipelines.
 
