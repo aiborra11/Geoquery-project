@@ -5,9 +5,9 @@ After-work culture is gaining relevance and even becoming an essential part in e
 
 **Criterion to optimize the location:**
 - Funded companies. They pay income to their employees (instead of equity) that can spend in our restaurant/bar.
-- Companies with at least 10 employees.
-- Technological companies might be more interesting since trending topics meetups might attract more consumers. 
-- Different offices from the same company might be interesting for special events.
+- Companies with at least 10 employees but less than 300. Making business with a very large companies is not very easy if your startup is not big enough. I cannot see SpaceX buying a bunch of nanosatelites to a recent startup. Basically the young startup will not be able to produce the amount, neither deliver on time. Therefore, it might be interesting to locate the bar/restaurant near to "medium size startups", if there are enough around.
+- Technological companies might be more interesting since trending topics meetups might attract more consumers.
+- Try to avoid competition (companies working in the same 'category_code'). It is not really a big issue. Most interesting synergies arise between competitors and competition is good. It always push yourself to your work at 200%. Only apply a low score because almost every company will be within the technological sector despite being a social, web, news, etc., category. Therefore, businesses will arise. 
 
 
 **Steps:**
