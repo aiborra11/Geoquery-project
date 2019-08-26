@@ -22,6 +22,7 @@ After-work culture is gaining relevance and even becoming an essential part in e
 ## My solution
 ![bar_location](https://github.com/aiborra11/visualizing-real-world-data-project/blob/master/images/barlocation.png)
 
+If it ever helps anyone with the location of a bar, feel free to reach me out and invite me to some beers ;)
 ## Links & Resources
 
 - https://docs.mongodb.com/manual/geospatial-queries/
