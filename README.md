@@ -19,7 +19,8 @@ After-work culture is gaining relevance and even becoming an essential part in e
 6. Do some querys using Google's API.
 7. Choose the best point and create a report using a pipelines.
 
-
+## My solution
+![Bar Location]("../images/barlocation.png")
 
 ## Links & Resources
 
@@ -29,3 +30,5 @@ After-work culture is gaining relevance and even becoming an essential part in e
 - https://developers.google.com/places/web-service/search
 - https://www.youtube.com/watch?v=PtV-ZnwCjT0
 - https://developers.google.com/places/web-service/search
+
+
