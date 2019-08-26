@@ -20,7 +20,7 @@ After-work culture is gaining relevance and even becoming an essential part in e
 7. Choose the best point and create a report using a pipelines.
 
 ## My solution
-![Bar Location]("../images/barlocation.png")
+![bar_location](https://raw.githubusercontent.com/aiborra11/visualizing-real-world-data-project/images/barlocation.png)
 
 ## Links & Resources
 
