@@ -3,93 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e7e8c308-0ed8-4019-8d28-9274b51ea418" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/0(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/0(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/0(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/1(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/1(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/1(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/2(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/2(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/2(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25326(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25326(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25326(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25326.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25327(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25327(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25327(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25327(4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25327.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25328(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25328(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25328(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25328(4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25328.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25329(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25329(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25329(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25329(4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25329.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25330(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25330(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25330(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25330(4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/25330.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50655(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50655(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50655(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50655(4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50655.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50656(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50656(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50656(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50656(4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50656.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50657(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50657(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50657(3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50657(4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/50657.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/MarkerCluster.Default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/MarkerCluster.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/MathJax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/bootstrap-tour.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/codemirror.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/contents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/encoding.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/index(1).js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/index(2).js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/jquery-1.12.4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/jquery.typeahead.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/leaflet.awesome-markers.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/leaflet.awesome-markers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/leaflet.awesome.rotate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/leaflet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/leaflet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/leaflet.markercluster.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/logo-64x64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/main.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/override.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/promise.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/require.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/saved_resource(1).html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/saved_resource(2).html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/saved_resource.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maplocation_files/style.min.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,8 +16,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="345">
-                <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <first_editor relative-caret-position="330">
+                <caret line="22" column="115" selection-start-line="22" selection-start-column="115" selection-end-line="22" selection-end-column="115" />
               </first_editor>
               <second_editor />
             </state>
@@ -158,6 +71,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -213,8 +127,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <first_editor relative-caret-position="330">
+            <caret line="22" column="115" selection-start-line="22" selection-start-column="115" selection-end-line="22" selection-end-column="115" />
           </first_editor>
           <second_editor />
         </state>
