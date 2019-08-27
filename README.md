@@ -17,7 +17,10 @@ After-work culture is gaining relevance and even becoming an essential part in e
 4. Export a json including the geopoint and set a geoquery using MongoDB.
 5. Print a map showing all the companies we filtered before.
 6. Do some querys using Google's API.
-7. Choose the best point and create a report using pipelines.
+7. Create 2 pipelines to:
+    a) Pipeline1: Process the data file and prepare it to convert into a geojson with a geoindex.
+    b) Pipeline2: After geoindexing the file using MongoDB Compass, process this new file and find out the best location.
+
 
 ## My solution
 ![bar_location](https://github.com/aiborra11/visualizing-real-world-data-project/blob/master/images/barlocation.png)

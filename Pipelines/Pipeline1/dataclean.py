@@ -1,4 +1,6 @@
-from acquisition import *
+import acquisition
+
+
 from pandas.io.json import json_normalize
 import pandas as pd
 import numpy as np
@@ -173,12 +175,22 @@ def concatenator(df1, df2):
 def json_creator(df, name):
     return df.to_json(f'../data/{name}.json', orient="records")
 
+
+
 # json_creator(offices_geo, 'geoffices')
 
 
 # Create the new collection in mongodb compass (geo_offices in my case) and import the geoffices.json writting the following comand into the terminal:
-#
 # mongoimport --db DBcompanies_cb --collection companies_clean --file geoffices.json --jsonArray
-#
 # Now move into the indexes area inside mongodb compass and create an index selecting the 'geopoint' column and 2dsphere. The result should look like this:
-#
+
+
+
+
+
+#We might have problems with the index if we want to use pipelines. Try a python comand to create the 2dsphere index without using mongodb.
+
+
+
+#2nd jupyter notebook.
+
