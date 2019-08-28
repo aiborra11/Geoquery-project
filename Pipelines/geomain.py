@@ -1,5 +1,6 @@
 from Pipelines.geopipeline import *
 
+
 def main():
     geodata = read_geofile('mongodb://localhost:27017/')
     top500 = geordering500(geodata)

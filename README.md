@@ -35,4 +35,8 @@ If it ever helps anyone with the location of a bar, feel free to reach me out an
 - https://www.youtube.com/watch?v=PtV-ZnwCjT0
 - https://developers.google.com/places/web-service/search
 
+## Next steps
 
+- Optimize pipelines. There are functions that could be reused in other points if they are optimized.
+- Argparse.
+- Using selenium open an interactive map where the office location is marked.
