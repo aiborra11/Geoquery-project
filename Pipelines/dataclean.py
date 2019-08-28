@@ -216,6 +216,7 @@ def concatenator(df1, df2):
 # offices_geo = columns_drop(offices_geo, 'office')
 # offices_geo = columns_drop(offices_geo, 'index')
 
+#Creating a json with the new dataframe to apply the geoindex using mongodb compass
 def json_creator(df, name):
     return df.to_json(f'../data/{name}.json', orient="records")
 

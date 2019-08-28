@@ -30,23 +30,21 @@ def cleaning(df):
     dataframe = duplicates_remover(dataframe)
     dataframe['wealthy'] = wealthy(dataframe)
     dataframe['news_agencies'] = hot_encoder(dataframe['category_code'], 'news')
-    geonew = geopoint(dataframe)
-    # dataframe = concatenator(dataframe, df2)
-    # dataframe = json_creator(dataframe, name)
+    geonew = dataframe.apply(geopoint, result_type="expand", axis=1).dropna()
+    dataframe = concatenator(dataframe, geonew)
+    dataframe = columns_drop(dataframe, 'index')
+    dataframe = columns_drop(dataframe, 'office')
+    dataframe = columns_drop(dataframe, 'duplicates')
+    dataframe = json_creator(dataframe, 'geoffices')
+
+    print('Next steps using MongoDB Compass: \n 1. Create a new collection (geo_offices in my case) to import the geoffices.json. \n 2. Write the following command into your terminal:\n   ** mongoimport --db DBcompanies_cb --collection companies_clean --file geoffices.json --jsonArray ** \n 3. Move into the indexes area inside Mongodb Compass and create an index selecting the "geopoint" column and setting 2dsphere.')
+
+
+
 
     return dataframe
 
 
-
-
-
-#
-# def deadpooled_finder(df):
-#     df['deadpooled'] = df[df.columns[10:13]].apply(lambda x: ','.join(x.dropna().astype(str)),
-#                                                                            axis=1).replace(r'^\s*$', np.nan, regex=True)
-#     return df['deadpooled']
-
-#one_office['deadpooled'] = deadpooled_finder(one_office)
 
 a = read_file('mongodb://localhost:27017/')
 b = cleaning(a)
@@ -55,7 +53,7 @@ b = cleaning(a)
 # print(len(b))
 # print(b['currency'].unique())
 
-print(b)
+# print(b.columns)
 
 # print(b.columns)
 
