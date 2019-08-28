@@ -1,4 +1,4 @@
-from geoacquisition import *
+from Pipelines.Pipeline1ipeline1.geoacquisition import *
 
 from pymongo import MongoClient
 import pandas as pd

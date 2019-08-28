@@ -1,18 +1,19 @@
-import acquisition
-
+# from Pipelines.Pipeline1.acquisition import *
 
 from pandas.io.json import json_normalize
 import pandas as pd
 import numpy as np
 import requests
-import re
-import pymongo
+
 
 #Merge deadpool related columns into 1 and fill blanks with NaN values.
 def deadpooled_finder(df):
     df['deadpooled'] = df[df.columns[10:13]].apply(lambda x: ','.join(x.dropna().astype(str)),
                                                                            axis=1).replace(r'^\s*$', np.nan, regex=True)
-    return df['deadpooled']
+    return pd.concat([df, df['deadpooled']])
+
+
+
 
 #one_office['deadpooled'] = deadpooled_finder(one_office)
 
@@ -22,9 +23,9 @@ def alives_finder(df):
 
 #one_office = alives_finder(one_office)
 
-#Dropping columns we no longer need.
-def columns_drop(df, col):
-    return df[[x for x in df.columns if x != col]]
+# Dropping columns we no longer need.
+# def columns_drop(df, col):
+#     return df[[x for x in df.columns if x != col]]
 
 def relevant_columns(df):
     return pd.DataFrame(df[['name', 'category_code', 'number_of_employees', 'offices', 'total_money_raised']])
@@ -32,7 +33,27 @@ def relevant_columns(df):
 #data = relevant_columns(one_office)
 
 
-#Converting symbols into string values for future uses.
+# Converting symbols into string values for future uses.
+# def currency_converter(df):
+#     currency_type = {'C$': 'CAD',
+#                      '$': 'USD',
+#                      '€': 'EUR',
+#                      '£': 'GBP',
+#                      '¥': 'JPY',
+#                      'kr': 'SEK'}
+#     print('s')
+#     lst = []
+#     for symb, name in currency_type.items():
+#         if symb in df:
+#             lst.append(name)
+#
+#     df['currency'] = pd.DataFrame(lst)
+#     return pd.concat([df, df['currency']])
+
+
+
+
+
 def currency_converter(df):
     currency_type = {'C$': 'CAD',
                      '$': 'USD',
@@ -174,6 +195,8 @@ def concatenator(df1, df2):
 
 def json_creator(df, name):
     return df.to_json(f'../data/{name}.json', orient="records")
+
+
 
 
 

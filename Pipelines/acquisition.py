@@ -1,20 +1,20 @@
 from pymongo import MongoClient
 import pandas as pd
 
-
-
 #Connecting the database with the queried data (companies_cb)
-def mongo_connect(host):             # mongodb://localhost:27017/
+def mongo_connect(host):
     client = MongoClient(host)
     db = client.DBcompanies_cb
     data = db.companies_cb
     return data
-#data = mongo_connect('mongodb://localhost:27017/')
+# data = mongo_connect('mongodb://localhost:27017/')
+#
+# print(data)
 
 
 # Query using Pymongo to receive all the required data for my analysis. (I know we should query everything at the same place (pymongo or mongodb compass), but was interested in trying both to learn.).
-def mongo_query(data, min_employee, max_employee):
-    one_office =  data.find({'$and': [
+def mongo_query(data, min_employee=10, max_employee=51):
+    one_office = data.find({'$and': [
         {'offices': {'$exists': True}},
         {'offices': {'$ne': None}},
         #     {'number_of_employees':{'$exists':True}}
@@ -29,5 +29,7 @@ def mongo_query(data, min_employee, max_employee):
 
     return pd.DataFrame(one_office)
 
-#one_office = mongo_query(data, 10, 51)
+# one_office = mongo_query(data)
+#
+# print(one_office)
 
