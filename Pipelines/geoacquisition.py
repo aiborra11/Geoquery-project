@@ -9,6 +9,7 @@ def geomongo_connect(host):
     data = db.companies_clean.find()
     return pd.DataFrame(data)
 
+
 # df_comp = geomongo_connect('mongodb://localhost:27017/')
 
 #Reordering the dataframe and dropping the column id
@@ -19,7 +20,6 @@ def geomongo_connect(host):
 
 
 def nearComps(host, df, rad_max_meters=1000):
-    def nearComps(host, df, rad_max_meters=1000):
         client = MongoClient(host)
         db = client.DBcompanies_cb
         lst = []
@@ -37,6 +37,8 @@ def nearComps(host, df, rad_max_meters=1000):
         return lst
 
 # df_comp['offices_near'] = nearComps('mongodb://localhost:27017/', df_comp['geopoint'])
+
+
 
 # Querying near news_agencies
 def nearNews(host, df, rad_max_meters=1000):

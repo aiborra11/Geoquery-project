@@ -1,5 +1,3 @@
-from Pipelines.Pipeline1ipeline1.geoacquisition import *
-
 from pymongo import MongoClient
 import pandas as pd
 import pymongo
@@ -23,3 +21,10 @@ def final_score(df, col1, col2, col3):
 
 # df_comp['final_score'] = final_score(df_comp, 'wealth', 'news_agencies', 'offices_near')
 
+#Select top 500 to test the api query. Then if it is not very expensive, we will try with the whole dataset.
+def top_500(df):
+    return df.sort_values('final_score', ascending = False).reset_index().head(500)
+
+
+
+# top500 = top_500(df_comp)

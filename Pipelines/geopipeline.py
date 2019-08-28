@@ -1,0 +1,82 @@
+from Pipelines.geoacquisition import *
+from Pipelines.geoclean import *
+from Pipelines.dataclean import columns_drop
+from Pipelines.geoapi import *
+
+
+def read_file(host):
+    print('Connecting to the database...')
+    geodatabase = geomongo_connect(host)
+    print('Looking for nearby companies...')
+    geodatabase['offices_near'] = nearComps(host, geodatabase['geopoint'], rad_max_meters=1000)
+    print('Looking for news agencies around....')
+    geodatabase['news_agencies'] = nearNews(host, geodatabase['geopoint'], rad_max_meters=1000)
+    return geodatabase
+
+
+def geordering500(df):
+    print("Normalizing column 'offices_near'...")
+    df['offices_near'] = normalizator(df['offices_near'])
+    print("Normalizing column news_agencies and weighting it negatively...")
+    df['news_agencies'] = normalizator(df['news_agencies'])*(-0.1)
+    print("Scoring...")
+    df['final_score'] = final_score(df, 'wealth', 'news_agencies', 'offices_near')
+    print('Selecting top 500...')
+    top500 = top_500(df)
+    print('Dropping columns we no longer need...')
+    top500 = columns_drop(top500, 'index')
+    top500 = columns_drop(top500, '_id')
+    return top500
+
+# def geoapi(top500):
+#     print('Looking for other bars...')
+#     top500['bar']=near_API(BASE_URL, top500,'bar', 1000)
+#     print('Looking for bus stops...')
+#     top500['bus']=near_API(BASE_URL, top500,'bus_station', 500)
+#     print('Looking for bus metro stations...')
+#     top500['subway_station']=near_API(BASE_URL, top500,'subway_station', 1000)
+#     print('Creating a csv file to avoid using the API again...')
+#     csv_creator(top500, 'top500')
+#     return top500
+
+def geonormalizing(path):
+    df = csv_reader(path)
+    df['bar'] = normalizator(df['bar']) * (-0.2)
+    df['bus'] = normalizator(df['bus']) * (0.5)
+    df['subway_station'] = normalizator(df['subway_station']) * (0.5)
+    print('Finding startups with no nearby bus/metro station and negatively weighting...')
+    df['bus'] = no_transport(df['bus'])
+    df['subway_station'] = no_transport(df['subway_station'])
+    print('Obtaining final score and sorting...')
+    df['score'] = final_score(df, 'bar', 'bus', 'subway_station')
+    df['score'] = df[['score', 'final_score']].sum(axis = 1).round(2)
+    df = columns_drop(df, 'index')
+    return df.sort_values('score', ascending = False)
+
+
+
+# df['score'] = final_score(df, 'bar', 'bus', 'subway_station')
+# df['score'] = df[['score', 'final_score']].sum(axis = 1).round(2)
+
+# df_final = df_final.sort_values('score', ascending = False)
+
+
+
+
+# a = read_file('mongodb://localhost:27017/')
+# print(a['news_agencies'])
+# print(a.columns)
+
+# b = geordering500(a)
+# c = geoapi(b)
+d = geonormalizing('../data/top500.csv', )
+# print(b.columns)
+# print(len(c))
+# print(b['offices_near'])
+# print(b['news_agencies'])
+# print(c.columns)
+
+# print(c)
+
+print(d)
+print(d.columns)

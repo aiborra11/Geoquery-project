@@ -1,6 +1,7 @@
 import requests as req
 from dotenv import load_dotenv
 import os
+import pandas as pd
 
 #Function to query Google's API and find info about other bars, bus and metro stations.
 
@@ -32,14 +33,15 @@ def near_API(BASE_URL, df, obj, rad):
 # top500['subway_station']=near_API(BASE_URL, top500,'subway_station', 1000)
 
 
-#Saving the dataframe into a csv to avoid using the API again
-# def csv_creator(df, name):
-# #     return df.to_csv(f'../data/{name}.csv', index=False)
-# # csv_creator(top500, 'top500')
-#Importing the csv
 
-# def csv_reader(path):
-#     return pd.read_csv(path)
+# Saving the dataframe into a csv to avoid using the API again
+def csv_creator(df, name):
+     return df.to_csv(f'../data/{name}.csv', index=False)
+# csv_creator(top500, 'top500')
+# Importing the csv
+
+def csv_reader(path):
+    return pd.read_csv(path)
 # df = csv_reader('../data/top500.csv')
 
 #Normalizing competition, bus and subway.
@@ -67,3 +69,4 @@ def no_transport(df):
 # df['score'] = df[['score', 'final_score']].sum(axis = 1).round(2)
 
 # df_final = df_final.sort_values('score', ascending = False)
+
