@@ -17,7 +17,7 @@ def cleaning(df):
     # dataframe = symbol_deleter(dataframe)
     dataframe['amount_raised'] = money_converter(dataframe['total_money_raised'])
 
-    dataframe = api_rates(url)
+    api_dict = api_rates('https://api.exchangerate-api.com/v4/latest/USD')
 
 
     # dataframe = currency_rate(df)

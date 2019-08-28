@@ -89,7 +89,7 @@ def money_converter(df):
 # data['amount_raised'] = money_converter(data['total_money_raised'])
 
 
-#Create a dictionary with the needed exchange rates using an API to obtain real data.
+Create a dictionary with the needed exchange rates using an API to obtain real data.
 def api_rates(url):
     response = requests.get(url)
     api_data = response.json()
@@ -111,6 +111,12 @@ def currency_rate(df):
     return pd.to_numeric(df.replace(api_dict, regex=True))
 
 # data['currency'] = currency_rate(data['currency'])
+
+
+
+
+
+
 
 #Standarize all valuations into one currency ($) and convert them into millions.
 def normalizator(df):
