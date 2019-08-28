@@ -40,7 +40,7 @@ def cleaning(df):
     dataframe = columns_drop(dataframe, 'index')
     dataframe = columns_drop(dataframe, 'office')
     dataframe = columns_drop(dataframe, 'duplicates')
-    dataframe = json_creator(dataframe, 'geoffices')
+    dataframe = json_creator(dataframe, 'geofficestesting')
     print('Next steps using MongoDB Compass: \n 1. Create a new collection (geo_offices in my case) to import the geoffices.json. \n 2. Write the following command into your terminal:\n   ** mongoimport --db DBcompanies_cb --collection companies_clean --file geoffices.json --jsonArray ** \n 3. Move into the indexes area inside Mongodb Compass and create an index selecting the "geopoint" column and setting 2dsphere.')
     return dataframe
 

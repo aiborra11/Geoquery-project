@@ -4,7 +4,7 @@ from Pipelines.dataclean import columns_drop
 from Pipelines.geoapi import *
 
 
-def read_file(host):
+def read_geofile(host):
     print('Connecting to the database...')
     geodatabase = geomongo_connect(host)
     print('Looking for nearby companies...')
@@ -28,16 +28,16 @@ def geordering500(df):
     top500 = columns_drop(top500, '_id')
     return top500
 
-# def geoapi(top500):
-#     print('Looking for other bars...')
-#     top500['bar']=near_API(BASE_URL, top500,'bar', 1000)
-#     print('Looking for bus stops...')
-#     top500['bus']=near_API(BASE_URL, top500,'bus_station', 500)
-#     print('Looking for bus metro stations...')
-#     top500['subway_station']=near_API(BASE_URL, top500,'subway_station', 1000)
-#     print('Creating a csv file to avoid using the API again...')
-#     csv_creator(top500, 'top500')
-#     return top500
+def geoapi(top500):
+    print('Looking for other bars...')
+    top500['bar']=near_API(BASE_URL, top500,'bar', 1000)
+    print('Looking for bus stops...')
+    top500['bus']=near_API(BASE_URL, top500,'bus_station', 500)
+    print('Looking for  metro stations...')
+    top500['subway_station']=near_API(BASE_URL, top500,'subway_station', 1000)
+    print('Creating a csv file to avoid using the API again...')
+    geotop500 = csv_creator(top500, 'top5001')
+    return geotop500
 
 def geonormalizing(path):
     df = csv_reader(path)
@@ -51,10 +51,10 @@ def geonormalizing(path):
     df['score'] = final_score(df, 'bar', 'bus', 'subway_station')
     df['score'] = df[['score', 'final_score']].sum(axis = 1).round(2)
     df = columns_drop(df, 'index')
-    return df.sort_values('score', ascending = False)
+    return df.sort_values('score', ascending = False).reset_index()
 
 
-# a = read_file('mongodb://localhost:27017/')
+# a = read_geofile('mongodb://localhost:27017/')
 # b = geordering500(a)
 # c = geoapi(b)
 # d = geonormalizing('../data/top500.csv', )
