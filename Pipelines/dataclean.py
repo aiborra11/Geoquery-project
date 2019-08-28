@@ -24,8 +24,8 @@ def alives_finder(df):
 #one_office = alives_finder(one_office)
 
 # Dropping columns we no longer need.
-# def columns_drop(df, col):
-#     return df[[x for x in df.columns if x != col]]
+def columns_drop(df, col):
+    return df[[x for x in df.columns if x != col]]
 
 def relevant_columns(df):
     return pd.DataFrame(df[['name', 'category_code', 'number_of_employees', 'offices', 'total_money_raised']])
@@ -89,8 +89,32 @@ def money_converter(df):
 # data['amount_raised'] = money_converter(data['total_money_raised'])
 
 
-Create a dictionary with the needed exchange rates using an API to obtain real data.
-def api_rates(url):
+# # Create a dictionary with the needed exchange rates using an API to obtain real data.
+# def api_rates(url):
+#     response = requests.get(url)
+#     api_data = response.json()
+#     api_dataframe = pd.DataFrame(json_normalize(api_data))
+#     api_dict = {
+#             'CAD':api_dataframe['rates.CAD'][0],
+#             'EUR':api_dataframe['rates.EUR'][0],
+#             'GBP':api_dataframe['rates.GBP'][0],
+#             'JPY':api_dataframe['rates.JPY'][0],
+#             'SEK':api_dataframe['rates.SEK'][0],
+#             'USD':1
+#             }
+#     return api_dict
+#
+# api_dict = api_rates('https://api.exchangerate-api.com/v4/latest/USD')
+#
+# #Set the currency valuation for every company.
+# def currency_rate(df, api_dict):
+#     return pd.to_numeric(df.replace(api_dict, regex=True))
+#
+# # data['currency'] = currency_rate(data['currency'], api_dict)
+
+
+#Create a dictionary with the needed exchange rates using an API to obtain real data.
+def api_rates(url, df):
     response = requests.get(url)
     api_data = response.json()
     api_dataframe = pd.DataFrame(json_normalize(api_data))
@@ -102,27 +126,19 @@ def api_rates(url):
             'SEK':api_dataframe['rates.SEK'][0],
             'USD':1
             }
-    return api_dict
-
-api_dict = api_rates('https://api.exchangerate-api.com/v4/latest/USD')
-
-#Set the currency valuation for every company.
-def currency_rate(df):
     return pd.to_numeric(df.replace(api_dict, regex=True))
-
-# data['currency'] = currency_rate(data['currency'])
-
-
-
 
 
 
 
 #Standarize all valuations into one currency ($) and convert them into millions.
-def normalizator(df):
+def currency_normalizator(df):
     return ((df['amount_raised']/df['currency'])/1000).round(2)
 
 # data['amount_raised_k$'] = normalizator(data)
+
+def dropnulls(df):
+    return df[pd.notnull(df['name'])]
 
 
 #Dropping more columns
@@ -136,6 +152,7 @@ def normalizator(df):
 def office_splitter(df):
     office_split = pd.DataFrame(df['offices'].tolist()).stack().reset_index(level=1, drop=True).rename('office')
     return df.merge(office_split, left_index=True, right_index=True).reset_index()
+
 
 # office_merged = office_splitter(data)
 
