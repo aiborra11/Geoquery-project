@@ -54,29 +54,7 @@ def geonormalizing(path):
     return df.sort_values('score', ascending = False)
 
 
-
-# df['score'] = final_score(df, 'bar', 'bus', 'subway_station')
-# df['score'] = df[['score', 'final_score']].sum(axis = 1).round(2)
-
-# df_final = df_final.sort_values('score', ascending = False)
-
-
-
-
 # a = read_file('mongodb://localhost:27017/')
-# print(a['news_agencies'])
-# print(a.columns)
-
 # b = geordering500(a)
 # c = geoapi(b)
-d = geonormalizing('../data/top500.csv', )
-# print(b.columns)
-# print(len(c))
-# print(b['offices_near'])
-# print(b['news_agencies'])
-# print(c.columns)
-
-# print(c)
-
-print(d)
-print(d.columns)
+# d = geonormalizing('../data/top500.csv', )

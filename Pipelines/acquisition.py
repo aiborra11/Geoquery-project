@@ -7,9 +7,6 @@ def mongo_connect(host):
     db = client.DBcompanies_cb
     data = db.companies_cb
     return data
-# data = mongo_connect('mongodb://localhost:27017/')
-#
-# print(data)
 
 
 # Query using Pymongo to receive all the required data for my analysis. (I know we should query everything at the same place (pymongo or mongodb compass), but was interested in trying both to learn.).
@@ -17,9 +14,8 @@ def mongo_query(data, min_employee=10, max_employee=51):
     one_office = data.find({'$and': [
         {'offices': {'$exists': True}},
         {'offices': {'$ne': None}},
-        #     {'number_of_employees':{'$exists':True}}
-        {'number_of_employees': {'$gte': min_employee}},        #10
-        {'number_of_employees': {'$lte': max_employee}},        #51
+        {'number_of_employees': {'$gte': min_employee}},
+        {'number_of_employees': {'$lte': max_employee}},
         {'offices.latitude': {'$ne': None}},
         {'offices.longitude': {'$ne': None}},
         {'offices.latitude': {'$exists': True}},
@@ -29,7 +25,4 @@ def mongo_query(data, min_employee=10, max_employee=51):
 
     return pd.DataFrame(one_office)
 
-# one_office = mongo_query(data)
-#
-# print(one_office)
 

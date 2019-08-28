@@ -46,6 +46,6 @@ def cleaning(df):
 
 
 
-a = read_file('mongodb://localhost:27017/')
-b = cleaning(a)
+# a = read_file('mongodb://localhost:27017/')
+# b = cleaning(a)
 
