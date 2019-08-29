@@ -20,6 +20,18 @@ After-work culture is gaining relevance and even becoming an essential part in e
 7. Create 2 pipelines to:
     a) Pipeline1: Process the data file and prepare it to convert into a geojson with a geoindex.
     b) Pipeline2: After geoindexing the file using MongoDB Compass, process this new file and find out the best location.
+    
+**Files**
+
+`My-code: ` Folder with jupyter notebooks files writting the project.
+
+`Source:` Folder containing two different pipelines: 
+    
+   a) Process the data file and prepare it to convert into a geojson with a geoindex.
+   
+   b) Process this new file and find out the best area to place our bar. It includes cleaning, geoquerys to google's API, scoring system and finnally plots an interactive map in your browser with the best area.
+   
+We only need to charge the dataset with the same structure as the ones we can find in the data file, once we receive the new document insert the geoindex and we will receive the automated result. 
 
 
 ## My solution
@@ -37,6 +49,6 @@ If it ever helps anyone with the location of a bar, feel free to reach me out an
 
 ## Next steps
 
-- Optimize pipelines. There are functions that could be reused in other points if they are optimized.
+- Optimize pipelines. There are functions that could be written in a more generic way.
 - Argparse.
-- Using selenium open an interactive map where the office location is marked.
+- Autogenerate a pdf file with an automated report.
