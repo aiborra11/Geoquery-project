@@ -24,7 +24,7 @@ def geordering500(df):
     print("Scoring...")
     df['final_score'] = final_score(df, 'wealth', 'news_agencies', 'offices_near')
     print('Selecting top 500...')
-    top500 = top_500(df, 10)
+    top500 = top_500(df, 500)
     print('Dropping columns we no longer need...')
     top500 = columns_drop(top500, 'index')
     top500 = columns_drop(top500, '_id')
@@ -35,7 +35,7 @@ def geoapi(top500):
     top500['bar']=near_API(BASE_URL, top500,'bar', 1000)
     print('Looking for bus stops...')
     top500['bus']=near_API(BASE_URL, top500,'bus_station', 500)
-    print('Looking for  metro stations...')
+    print('Looking for metro stations...')
     top500['subway_station']=near_API(BASE_URL, top500,'subway_station', 1000)
     print('Creating a csv file to avoid using the API again...')
     geotop500 = csv_creator(top500, 'top5001')
@@ -53,7 +53,8 @@ def geonormalizing(path):
     df['score'] = final_score(df, 'bar', 'bus', 'subway_station')
     df['score'] = df[['score', 'final_score']].sum(axis = 1).round(2)
     df = columns_drop(df, 'index')
-    return df.sort_values('score', ascending = False).reset_index()
+    print('Top10 startups to locate near around. Check these coordenates:')
+    return print(df.sort_values('score', ascending = False).reset_index().head(10))
 
 
 
