@@ -38,7 +38,7 @@ def geoapi(top500):
     print('Looking for metro stations...')
     top500['subway_station']=near_API(BASE_URL, top500,'subway_station', 1000)
     print('Creating a csv file to avoid using the API again...')
-    geotop500 = csv_creator(top500, 'top5001')
+    geotop500 = csv_creator(top500, 'top500')
     return geotop500
 
 def geonormalizing(path):
