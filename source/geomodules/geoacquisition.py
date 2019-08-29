@@ -1,6 +1,8 @@
 from pymongo import MongoClient
 import pandas as pd
 
+
+
 #Connecting the database with the geo_offices data and returning the dataframe.
 def geomongo_connect(host):
     client = MongoClient(host)

@@ -1,4 +1,4 @@
-from Pipelines.geopipeline import *
+from geomodules.geopipeline import *
 
 
 def main():

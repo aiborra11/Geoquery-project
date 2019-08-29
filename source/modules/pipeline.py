@@ -1,5 +1,7 @@
-from Pipelines.acquisition import *
-from Pipelines.dataclean import *
+from .acquisition import *
+from .dataclean import *
+# from .test import *
+
 
 def read_file(host):
     print('Reading file...')
@@ -44,6 +46,8 @@ def cleaning(df):
     print('Next steps using MongoDB Compass: \n 1. Create a new collection (geo_offices in my case) to import the geoffices.json. \n 2. Write the following command into your terminal:\n   ** mongoimport --db DBcompanies_cb --collection companies_clean --file geoffices.json --jsonArray ** \n 3. Move into the indexes area inside Mongodb Compass and create an index selecting the "geopoint" column and setting 2dsphere.')
     return dataframe
 
+# def pdfgenerator(df):
+#     return PDFgenerator(df)
 
 
 # a = read_file('mongodb://localhost:27017/')

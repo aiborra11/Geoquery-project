@@ -1,7 +1,9 @@
-from Pipelines.geoacquisition import *
-from Pipelines.geoclean import *
-from Pipelines.dataclean import columns_drop
-from Pipelines.geoapi import *
+from .geoacquisition import *
+from .geoclean import *
+from .dataclean import columns_drop
+from .geoapi import *
+
+
 
 
 def read_geofile(host):
@@ -22,7 +24,7 @@ def geordering500(df):
     print("Scoring...")
     df['final_score'] = final_score(df, 'wealth', 'news_agencies', 'offices_near')
     print('Selecting top 500...')
-    top500 = top_500(df)
+    top500 = top_500(df, 10)
     print('Dropping columns we no longer need...')
     top500 = columns_drop(top500, 'index')
     top500 = columns_drop(top500, '_id')
@@ -52,6 +54,7 @@ def geonormalizing(path):
     df['score'] = df[['score', 'final_score']].sum(axis = 1).round(2)
     df = columns_drop(df, 'index')
     return df.sort_values('score', ascending = False).reset_index()
+
 
 
 # a = read_geofile('mongodb://localhost:27017/')
