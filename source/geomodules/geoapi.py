@@ -2,6 +2,9 @@ import requests as req
 from dotenv import load_dotenv
 import os
 import pandas as pd
+import folium
+from folium.plugins import FastMarkerCluster
+import webbrowser
 
 #Function to query Google's API and find info about other bars, bus and metro stations.
 
@@ -45,4 +48,10 @@ def no_transport(df):
     return lst
 
 
-
+def mapa(df):
+    latlng = df[['lat', 'lng']]
+    mi = folium.Map(zoom_start=15)
+    minimap = FastMarkerCluster(latlng).add_to(mi)
+    mi.add_child(minimap)
+    mi.save('../pdf/bar.html')
+    return webbrowser.open('file://'+ os.path.realpath('../pdf/bar.html'))

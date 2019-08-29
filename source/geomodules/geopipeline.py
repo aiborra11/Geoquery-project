@@ -54,7 +54,9 @@ def geonormalizing(path):
     df['score'] = df[['score', 'final_score']].sum(axis = 1).round(2)
     df = columns_drop(df, 'index')
     print('Top10 startups to locate near around. Check these coordenates:')
-    return print(df.sort_values('score', ascending = False).reset_index().head(10))
+    top10 = df.sort_values('score', ascending=False).reset_index().head(10)
+    print(top10)
+    return mapa(top10)
 
 
 
